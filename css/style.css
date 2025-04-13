@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f7f5f1;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    height: 70px;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.logo p {
+    font-family: 'Imperial Script', cursive;
+    font-size: 36px;
+    color: #6B4E31;
+    transition: all 0.3s ease;
+}
+
+.burger-menu {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6B4E31;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #F5E8E4;
+}
+
+.cart-icon img {
+    height: 20px;
+    filter: grayscale(100%) sepia(100%) hue-rotate(10deg) saturate(200%);
+}
+
+.mobile-logo {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #6B4E31;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hero-content p {
+    font-family: 'Imperial Script', cursive;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #6B4E31;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #F5E8E4;
+    color: #6B4E31;
+}
+
+/* Assortment Section */
+.assortment {
+    padding: 60px 40px;
+    margin-top: -3px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.assortment h2 {
+    font-family: 'Ballet', cursive;
+    font-size: 36px;
+    color: #6B4E31;
+    margin-bottom: 40px;
+}
+
+.assortment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.assortment-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+
+.assortment-item h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 40px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-family: 'Ballet', cursive;
+    font-size: 36px;
+    color: #6B4E31;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-button {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: #6B4E31;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.about-button:hover {
+    color: #F5E8E4;
+}
+
+.about-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.about-images img:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.about-images img:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.about-images img:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.about-images img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.about-images img:nth-child(3) {
+    height: 310px;
+}
+
+/* New Section */
+.new-section {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.new-section-img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.7);
+}
+
+.new-section-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+}
+
+.new-section-content h2 {
+    font-family: 'Ballet', cursive;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.new-section-content p {
+    font-family: 'Lexend', cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.new-section-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6B4E31;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-section-button:hover {
+    background-color: #F5E8E4;
+    color: #a37373;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f5f1;
+    border-top: 1px solid #e6e6e6;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+/* Скрываем элементы до анимации */
+.animated {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Класс для элементов, которые уже в зоне видимости */
+.animated.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Кастомные задержки для последовательного появления */
+header, .hero-content h1, .hero-content p, .hero-button, 
+.assortment h2, .assortment-item, .about h2, .about-text, 
+.about-images img, .new-section-content h2, .new-section-content p, 
+.new-section-button, footer {
+    animation-fill-mode: both;
+}
+
+/* Задержки для элементов hero */
+.hero-content h1 {
+    animation-delay: 0.2s;
+}
+.hero-content p {
+    animation-delay: 0.4s;
+}
+.hero-button {
+    animation-delay: 0.6s;
+}
+
+/* Задержки для assortment */
+.assortment h2 {
+    animation-delay: 0.2s;
+}
+.assortment-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.assortment-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.assortment-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.assortment-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Задержки для about */
+.about h2 {
+    animation-delay: 0.2s;
+}
+.about-text {
+    animation-delay: 0.4s;
+}
+.about-images img:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.about-images img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+.about-images img:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Задержки для new-section */
+.new-section-content h2 {
+    animation-delay: 0.2s;
+}
+.new-section-content p {
+    animation-delay: 0.4s;
+}
+.new-section-button {
+    animation-delay: 0.6s;
+}
+
+/* Задержка для футера */
+footer {
+    animation-delay: 0.2s;
+}
+
+/* Кастомная анимация для логотипа */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(107, 78, 49, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(107, 78, 49, 0.8), 0 0 30px rgba(107, 78, 49, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(107, 78, 49, 0.3);
+    }
+}
+
+.logo p {
+    animation: glow 3s infinite ease-in-out;
+}
+.animate__animated {
+    --animate-duration: 1.5s; /* Изменить длительность анимации */
+}

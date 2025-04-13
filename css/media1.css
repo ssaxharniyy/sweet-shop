@@ -1,0 +1,772 @@
+/* Для планшетов и небольших ноутбуков (870px - 1023px) */
+@media (min-width: 870px) and (max-width: 1023px) {
+    header {
+        left: 0;
+    }
+
+    .logo p {
+        font-size: 44px;
+        color: #6B4E31;
+        transition: color 0.3s ease;
+    }
+
+    .logo p:hover {
+        color: #F5E8E4;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
+    .cart-icon img {
+        height: 28px;
+        transition: transform 0.3s ease;
+    }
+
+    .cart-icon img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Контент */
+    main {
+        max-width: 1600px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* Герой */
+    .hero-content {
+        width: 800px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-content p {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+        margin-bottom: 8px;
+    }
+
+    .hero-button {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+
+    .about-text {
+        padding-left: 25px;
+    }
+
+    /* Подвал */
+    footer {
+        padding: 20px 0;
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для мобильных устройств (≤768px) */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 15px 20px;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #6B4E31;
+        transition: all 0.3s ease;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo p {
+        font-size: 28px;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #f7f5f1;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .mobile-logo {
+        display: block;
+        font-family: 'Imperial Script', cursive;
+        font-size: 28px;
+        color: #6B4E31;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(107, 78, 49, 0.2);
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 12px;
+        margin: 5px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(107, 78, 49, 0.1);
+    }
+
+    /* Cart */
+    .cart-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Hero */
+    .hero-img {
+        height: 500px;
+    }
+
+    .hero-content {
+        top: 50%;
+        width: 80%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+    }
+
+    /* Assortment */
+    .assortment-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .assortment-item img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /* About */
+    .about-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-images {
+        grid-template-columns: 1fr;
+    }
+
+    .about-images img {
+        height: 200px;
+    }
+
+    .about-images img:nth-child(3) {
+        height: 200px;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* New Section */
+    .new-section-img {
+        height: 500px;
+    }
+
+    /* Подвал */
+    footer {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для совсем маленьких экранов (≤480px) */
+@media (max-width: 480px) {
+    .hero-content {
+        top: 45%;
+    }
+
+    .assortment-item img {
+        height: 180px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    /* Подвал */
+    footer {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для планшетов (≥768px, ландшафтная ориентация) */
+@media (min-width: 768px) and (orientation: landscape) {
+    /* Шапка */
+    header {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    .logo p {
+        font-size: 40px;
+    }
+
+    .cart-icon img {
+        height: 24px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    /* Контент */
+    main {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* Герой */
+    .hero-img {
+        height: 600px;
+    }
+
+    .hero-content {
+        top: 38%;
+        width: 600px;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .hero-button {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+
+    /* Ассортимент */
+    .assortment {
+        margin-top: 20px;
+        padding: 60px 0;
+    }
+
+    .assortment h2 {
+        font-size: 40px;
+    }
+
+    .assortment-item h3 {
+        font-size: 20px;
+    }
+
+    .assortment-item img {
+        height: 550px;
+    }
+
+    /* О нас */
+    .about {
+        padding: 60px 0;
+    }
+
+    .about-text p {
+        font-size: 17px;
+    }
+
+    .about-button {
+        font-size: 17px;
+    }
+
+    .about-images img {
+        height: 250px;
+    }
+
+    .about-images img:nth-child(3) {
+        height: 510px;
+    }
+
+    /* Новая секция */
+    .new-section-content h2 {
+        font-size: 55px;
+    }
+
+    .new-section-content p {
+        font-size: 26px;
+    }
+
+    .new-section-button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    /* Подвал */
+    footer {
+        width: 100%;
+        padding: 20px 0;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для планшетов в ландшафтной ориентации (768px - 870px) — добавляем бургер-меню */
+@media (min-width: 768px) and (max-width: 870px) and (orientation: landscape) {
+    /* Header */
+    header {
+        padding: 15px 20px;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #6B4E31;
+        transition: all 0.3s ease;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo p {
+        font-size: 28px;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #f7f5f1;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .mobile-logo {
+        display: block;
+        font-family: 'Imperial Script', cursive;
+        font-size: 28px;
+        color: #6B4E31;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(107, 78, 49, 0.2);
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 12px;
+        margin: 5px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(107, 78, 49, 0.1);
+    }
+
+    /* Cart */
+    .cart-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Hero */
+    .hero-img {
+        height: 500px;
+    }
+
+    .hero-content {
+        top: 50%;
+        width: 80%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+    }
+
+    /* Подвал */
+    footer {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для ноутбуков и десктопов (≥1024px, ландшафтная ориентация) */
+@media (min-width: 1024px) and (orientation: landscape) {
+    /* Шапка */
+    header {
+        padding: 20px 50px;
+        left: 0;
+    }
+
+    .logo p {
+        font-size: 35px;
+        color: #6B4E31;
+        transition: color 0.3s ease;
+    }
+
+    .logo p:hover {
+        color: #F5E8E4;
+    }
+
+    nav {
+        gap: 35px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .cart-icon img {
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .cart-icon img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Контент */
+    main {
+        max-width: 1280px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /* Герой */
+    .hero-img {
+        height: 560px;
+    }
+
+    .hero-content {
+        width: 640px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    /* Ассортимент */
+    .assortment-item img {
+        height: 520px;
+    }
+
+    /* О нас */
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-images img {
+        height: 240px;
+    }
+
+    .about-images img:nth-child(3) {
+        height: 488px;
+    }
+
+    /* Подвал */
+    footer {
+        padding: 20px 0;
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для горизонтальных мониторов (≥1440px, только ландшафт) */
+@media (min-width: 1440px) and (orientation: landscape) {
+    /* Шапка */
+    header {
+        left: 0;
+    }
+
+    .logo p {
+        font-size: 44px;
+        color: #6B4E31;
+        transition: color 0.3s ease;
+    }
+
+    .logo p:hover {
+        color: #F5E8E4;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
+    .cart-icon img {
+        height: 28px;
+        transition: transform 0.3s ease;
+    }
+
+    .cart-icon img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Контент */
+    main {
+        max-width: 1600px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* Герой */
+    .hero-content {
+        width: 800px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-content p {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+        margin-bottom: 8px;
+    }
+
+    .hero-button {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+
+    .about-text {
+        padding-left: 25px;
+    }
+
+    /* Подвал */
+    footer {
+        padding: 20px 0;
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Для вертикальных мониторов (ширина ≥768px, только портрет) */
+@media (min-width: 768px) and (orientation: portrait) {
+    /* Сбрасываем стили, чтобы вертикальные мониторы использовали только базовые стили из style.css */
+    header {
+        padding: 20px 40px;
+        left: 0;
+    }
+
+    .logo p {
+        font-size: 36px;
+        color: #6B4E31;
+        transition: none;
+    }
+
+    .logo p:hover {
+        color: #6B4E31;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .cart-icon img {
+        height: 20px;
+        transition: none;
+    }
+
+    .cart-icon img:hover {
+        transform: none;
+    }
+
+    main {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-img {
+        height: 800px;
+    }
+
+    .hero-content {
+        width: auto;
+        background-color: transparent;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 500px;
+        height: 250px;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .assortment-item img {
+        height: 450px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-button {
+        font-size: 16px;
+    }
+
+    .about-images img {
+        height: 150px;
+    }
+
+    .about-images img:nth-child(3) {
+        height: 310px;
+    }
+
+    .new-section-content h2 {
+        font-size: 48px;
+    }
+
+    .new-section-content p {
+        font-size: 24px;
+    }
+
+    .new-section-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 20px;
+        height: auto;
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
