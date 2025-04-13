@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosted Muse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Imperial+Script&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <main>
+        <header class="animated" data-animation="fadeInDown">
+            <div class="header-container">
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <p>Frosted Muse</p>
+                </div>
+                <div class="cart-icon">
+                    <img src="https://img.icons8.com/ios-filled/50/shopping-cart.png" alt="Cart Icon">
+                </div>
+            </div>
+            <nav>
+                <div class="mobile-logo">Frosted Muse</div>
+                <a href="#">Assortment</a>
+                <a href="#">About</a>
+                <a href="#">Order</a>
+                <a href="#">Delivery</a>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <img src="img/background1.jpg" class="hero-img animated" data-animation="fadeIn" alt="Cake Background">
+            <div class="hero-content">
+                <h1 class="animated" data-animation="zoomIn">Frosted Muse</h1>
+                <p class="animated" data-animation="zoomIn">turn the cake into art</p>
+                <a href="#" class="hero-button animated" data-animation="bounceIn">Choose a cake</a>
+            </div>
+        </div>
+
+        <section class="assortment">
+            <h2 class="animated" data-animation="fadeInUp">Assortment</h2>
+            <div class="assortment-grid">
+                <div class="assortment-item animated" data-animation="fadeInUp">
+                    <img src="img/block2.1.jpg" alt="Cakes">
+                    <h3>Cakes</h3>
+                </div>
+                <div class="assortment-item animated" data-animation="fadeInUp">
+                    <img src="img/block2.2.jpg" alt="Baking">
+                    <h3>Baking</h3>
+                </div>
+                <div class="assortment-item animated" data-animation="fadeInUp">
+                    <img src="img/block2.3.jpg" alt="Wedding Cakes">
+                    <h3>Wedding Cakes</h3>
+                </div>
+                <div class="assortment-item animated" data-animation="fadeInUp">
+                    <img src="img/block2.4.jpg" alt="Cupcakes">
+                    <h3>Cupcakes</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2 class="animated" data-animation="fadeInUp">About</h2>
+            <div class="about-content">
+                <div class="about-text animated" data-animation="fadeInLeft">
+                    <p>We bake the cake and prepare the cream as you want, using only natural ingredients of high quality. Putting the bake cake we are waiting for the biscuit to inflate and soak. We think over the design, the color scheme and every detail of the cake and proceed to the donor. <a href="#" class="about-button">Learn more</a></p>
+                </div>
+                <div class="about-images">
+                    <img src="img/block3.1.jpg" class="animated" data-animation="fadeInRight" alt="About Image 1">
+                    <img src="img/block3.2.jpg" class="animated" data-animation="fadeInRight" alt="About Image 2">
+                    <img src="img/block3.3.jpg" class="animated" data-animation="fadeInRight" alt="About Image 3">
+                </div>
+            </div>
+        </section>
+
+        <section class="new-section">
+            <img src="img/top-view-creamy-delicious-cake-with-strawberries-white-surface-birthday-cream-tea-cake-biscuit-sweet.jpg" class="new-section-img animated" data-animation="fadeIn" alt="Background Image 3">
+            <div class="new-section-content">
+                <h2 class="animated" data-animation="zoomIn">Indulge in Sweet Bliss</h2>
+                <p class="animated" data-animation="zoomIn">our signature dessert awaits you</p>
+                <a href="#" class="new-section-button animated" data-animation="bounceIn">Try It Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animated" data-animation="fadeInUp">
+        <p>© 2023 Frosted Muse. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Функция для проверки, виден ли элемент
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Функция для добавления анимации
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animated');
+            elements.forEach(element => {
+                if (isElementInViewport(element) && !element.classList.contains('visible')) {
+                    element.classList.add('visible');
+                    const animation = element.getAttribute('data-animation');
+                    element.classList.add('animate__animated', `animate__${animation}`);
+                }
+            });
+        }
+
+        // Запускаем анимацию при загрузке страницы и при скролле
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('resize', animateOnScroll);
+
+        // Анимация бургер-меню (добавляем плавность)
+        const burgerMenu = document.querySelector('.burger-menu');
+        const nav = document.querySelector('nav');
+        const logo = document.querySelector('.logo p');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                logo.style.display = 'none';
+            } else {
+                logo.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
